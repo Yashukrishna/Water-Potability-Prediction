@@ -18,7 +18,7 @@ The project employed various machine learning algorithms for classification, inc
 
 1.**Clone the Repository:**
 ```python
-git clone https://github.com/YourUsername/Water-Quality-Prediction.git
+git clone https://github.com/Yashukrishna/Water-Quality-Prediction.git
 ```
 2.**Navigate to Project Directory:**
 ```python
