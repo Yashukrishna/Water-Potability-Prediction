@@ -1,0 +1,126 @@
+/* General Page Styling */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    background-color:whitesmoke;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 900px;
+}
+
+/* Form Heading */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Section - Arranges inputs in three columns */
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Individual Input Box Container */
+.input-group {
+    flex: 1 1 calc(33.33% - 20px); /* Three inputs in a row */
+    display: flex;
+    align-items: center; /* Align label and input in a single row */
+    justify-content: space-between;
+    min-width: 200px;
+    
+}
+
+/* Labels for Inputs */
+label {
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+    text-align: right;
+    padding-right: 3pxpx; /* Space between label and input */
+}
+
+/* Input Fields Styling */
+input {
+    flex: 0.8; /* Input takes twice the space of label */
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: 0.3s ease-in-out;
+}
+#h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration:underline
+}
+/* Input Focus Effect */
+input:focus {
+    border-color: #6cb2eb;
+    outline: none;
+    box-shadow: 0 0 8px rgba(108, 178, 235, 0.5);
+}
+
+/* Submit Button */
+button {
+    background-color: #6cb2eb;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    width: 100;
+    margin-top: 15px;
+   margin-left: 40%;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #4c8dd8;
+}
+
+/* Result Section */
+#resultSection {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #444;
+}
+
+/* Responsive Design for Medium Screens */
+@media (max-width: 850px) {
+    .input-group {
+        flex: 1 1 calc(50% - 20px); /* Two inputs per row */
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .input-group {
+        flex: 1 1 100%; /* One input per row */
+    }
+
+    label {
+        text-align: left;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Water Quality Prediction</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="h2">Water Quality Prediction</h2>
+       
+        
+        <form action="/predict_waterQ" method="POST">
+            <div class="input-section">
+                
+                <div class="input-group">
+                    <label for="ph">pH Level:</label>
+                    <input type="text" id="ph" name="ph" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="hardness">Hardness:</label>
+                    <input type="text" id="hardness" name="hardness" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="solids">Solids:</label>
+                    <input type="text" id="solids" name="solids" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="chloramines">Chloramines:</label>
+                    <input type="text" id="chloramines" name="chloramines" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="sulfate">Sulfate:</label>
+                    <input type="text" id="sulfate" name="sulfate" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="conductivity">Conductivity:</label>
+                    <input type="text" id="conductivity" name="conductivity" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="organicCarbon">Organic Carbon:</label>
+                    <input type="text" id="organicCarbon" name="organicCarbon" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="trihalomethanes">Trihalomethanes:</label>
+                    <input type="text" id="trihalomethanes" name="trihalomethanes" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="turbidity">Turbidity:</label>
+                    <input type="text" id="turbidity" name="turbidity" required>
+                </div>
+    
+            </div>
+    
+            <button type="submit">Predict Water Quality</button>
+        </form>
+    
+        <div id="resultSection">
+            {% if prediction %}
+                <p>Prediction: {{ prediction }}</p>
+            {% endif %}
+        </div>
+    </div>
+    
+</body>
+
+</html>
